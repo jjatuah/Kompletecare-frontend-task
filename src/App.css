@@ -5,7 +5,7 @@
 
 .custom-topBar {
   color: rgba(56, 47, 144, 0.6);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   padding-top: 40px;
 }
@@ -22,4 +22,47 @@
   font-weight: 500;
   padding-bottom: 30px;
   padding-top: 5px;
+}
+
+.custom-form {
+  background: #fff;
+  padding: 45px;
+}
+
+.custom-col {
+  padding: 0 25px 25px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.custom-label1 {
+  color: #382F90;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.custom-row {
+  border-bottom: 1px solid #E0E0E0;
+  margin-bottom: 25px;
+} 
+
+.custom-label2 {
+  color: #9FA2B4;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+.custom-submitBtn {
+  margin-top: 40px;
+  background: #382F90;
+  color: #fff;
+  border: none;
+  display: flex;
+  margin-left: auto;
+  font-size: 15px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-right: 80px;
 }
