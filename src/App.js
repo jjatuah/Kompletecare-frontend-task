@@ -11,11 +11,13 @@ import { MdNotifications } from 'react-icons/md';
 function App() {
   return (
     <div className="App">
-      <Sidebar />
+      <section className='side'>
+        <Sidebar />
+      </section>
       <section className="mainPage">
         <Container>
           <Row className="justify-content-end align-items-center custom-topBar">
-            <Col xs={1} sm={1} md={1} lg={1}>Take a tour</Col>
+            <Col xs={1} sm={1} md={1} lg={2}>Take a tour</Col>
             <Col xs={1} sm={1} fluid md={1}><Image src={vector1}/> </Col>
             <Col xs={1} sm={1} fluid md={1}><Image src={vector2}/></Col>
             <Col xs={1} sm={1} md={1}><Image roundedCircle fluid src={profilePic}/></Col>

@@ -1,13 +1,21 @@
+.App {
+  display: flex;
+}
+
+.side {
+  padding-top: 150px;
+}
+
 .mainPage {
   background: #F5F5FB;
+  padding: 50px;
   
 }
 
 .custom-topBar {
   color: rgba(56, 47, 144, 0.6);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
-  padding-top: 40px;
 }
 
 .custom-header {
