@@ -7,10 +7,40 @@ import Sidebar from './components/sidebar/Sidebar';
 import {Container, Row, Col, Image, Form, Button} from 'react-bootstrap'; 
 import { BsFillEnvelopeFill } from 'react-icons/bs';
 import { MdNotifications } from 'react-icons/md';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function App() {
 
   let options=["Check me out", "Check me out", "Check me out", "Check me out", "Check me out","Check me out","Check me out", "Check me out", "Check me out", "Check me out", "Check me out","Check me out","Check me out", "Check me out", "Check me out", "Check me out", "Check me out","Check me out","Check me out", "Check me out", "Check me out", "Check me out"];
+
+  const [data1, setData1] = useState({})
+  const [list1, setList1] = useState([])
+  const [data2, setData2] = useState({})
+  const [list2, setList2] = useState([])
+  
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const response = await axios.get(`https://testdrive.kompletecare.com/api/investigations`, {
+          headers: {
+            Authorization: "Bearer 5034|mRuuuY0tzRPpAMqk6bmkdiTabQJp6DiktZN2MBwl"
+          }
+        });  
+
+        // console.log(response.data.data[0].investigations);
+        // console.log(response.data.data[0]);
+        setData1(response.data.data[0])
+        setList1(response.data.data[0].investigations)
+        setData2(response.data.data[1])
+        setList2(response.data.data[1].investigations)
+
+      } catch (error) { 
+        console.log(error);
+      }
+    }
+    getData()
+  }, [])
   return (
     <div className="App">
       <section className='side'>
@@ -30,24 +60,21 @@ function App() {
           <Form className='custom-form'>            
             <Container>
               <Form.Group className="" controlId="formBasicCheckbox">
-                <Form.Label className='custom-label1'>Email address</Form.Label>
+                <Form.Label className='custom-label1'>{data1.title}</Form.Label>
                 <Row className="justify-content-start align-items-center custom-row">
-                  {options.map((option,index) => {
-                    return <Col key={index} className='custom-col' sm={12} md={5} xl={3} lg={4}><Form.Check type="checkbox" label={option} /></Col>
+                  {list1.map((investigation,index) => {
+                    return <Col key={index} className='custom-col' sm={12} md={5} xl={3} lg={4}><Form.Check type="checkbox" label={investigation.title} /></Col>
                   })}
                 </Row>
               </Form.Group>
 
 
               <Form.Group className="" controlId="formBasicCheckbox">
-                <Form.Label className='custom-label1'>Email address</Form.Label>
+                <Form.Label className='custom-label1'>{data2.title}</Form.Label>
                 <Row className="justify-content-start align-items-center custom-row">
-                  <Col className='custom-col' sm={12} md={5} xl={3} lg={4}><Form.Check type="checkbox" label="Check me out" /></Col>
-                  <Col className='custom-col' sm={12} md={5} xl={3} lg={4}><Form.Check type="checkbox" label="Check me out" /></Col>
-                  <Col className='custom-col' sm={12} md={5} xl={3} lg={4}><Form.Check type="checkbox" label="Check me out" /></Col>
-                  <Col className='custom-col' sm={12} md={5} xl={3} lg={4}><Form.Check type="checkbox" label="Check me out" /></Col>
-                  <Col className='custom-col' sm={12} md={5} xl={3} lg={4}><Form.Check type="checkbox" label="Check me out" /></Col>
-                  <Col className='custom-col' sm={12} md={5} xl={3} lg={4}><Form.Check type="checkbox" label="Check me out" /></Col>
+                  {list2.map((investigation,index) => {
+                    return <Col key={index} className='custom-col' sm={12} md={5} xl={3} lg={4}><Form.Check type="checkbox" label={investigation.title} /></Col>
+                  })}
                 </Row>
               </Form.Group>
 
