@@ -1,0 +1,32 @@
+.sidebar {
+  width: 220px;
+}
+
+.sidebar > ul {
+  list-style-type: none;
+}
+
+.sidebar > ul > li {
+  padding: 10px 15px; 
+  color: #A0A0A0;
+  align-items: center;
+  display: flex;
+  font-size: 12px;
+}
+
+.sidebar > ul > li > span {
+  align-items: center;
+  display: flex;
+  margin-right: 20px;
+}
+
+.sidebar > ul > li:hover {
+  cursor: pointer;
+  background: #2A36A4;
+  color: #fff;
+}
+
+.sidebar > ul > li:nth-child(8) {
+  padding-top: 10px;
+  border-top: 1px solid #DFE0EB;
+}
