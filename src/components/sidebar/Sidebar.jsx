@@ -44,13 +44,13 @@ const Sidebar = () => {
       <div className="mobileMenu">
         {menuStatus ? 
           <div className="closeBtn">
-            <GrClose  
+            <GrClose style={{backgroundColor:"#F5F5FB"}}  
             onClick= {() => setMenuStatus(false)} 
             />
           </div>
         :
           <div className="menuBtn">
-            <BiMenu onClick= {() => setMenuStatus(true)}           
+            <BiMenu style={{backgroundColor:"#F5F5FB"}} onClick= {() => setMenuStatus(true)}           
             />
           </div>
         }

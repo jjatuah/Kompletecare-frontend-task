@@ -82,12 +82,12 @@ function App() {
       </section>
       <section className="mainPage">
         <Container>
-          <Row className="justify-content-end align-items-center custom-topBar">
-            <Col xs={1} sm={4} md={3} lg={2}>Take a tour</Col>
-            <Col xs={1} sm={1}  md={1}><Image src={vector1}/> </Col>
-            <Col xs={1} sm={1}  md={1}><Image src={vector2}/></Col>
-            <Col xs={1} sm={1} md={1}><Image roundedCircle src={profilePic}/></Col>
-          </Row>
+          <div className="custom-topBar">
+            <p>Take a Tour</p>
+            <p><Image src={vector1}/></p>
+            <p><Image src={vector2}/></p>
+            <p><Image roundedCircle src={profilePic}/></p>
+          </div>
           <h2 className='custom-header'>Update Patient Medical Record</h2>
           <p className='custom-text'>Click the tabs to view and edit patient medical details</p>
 

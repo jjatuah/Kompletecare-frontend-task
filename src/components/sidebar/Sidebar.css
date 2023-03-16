@@ -26,6 +26,11 @@
   color: #fff;
 }
 
+.menu > li:nth-child(1) {
+  background: #2A36A4;
+  color: #fff;
+}
+
 .menu > li:nth-child(8) {
   padding-top: 10px;
   border-top: 1px solid #DFE0EB;
