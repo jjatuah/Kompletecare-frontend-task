@@ -1,2 +1,25 @@
+.mainPage {
+  background: #F5F5FB;
+  
+}
 
+.custom-topBar {
+  color: rgba(56, 47, 144, 0.6);
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 40px;
+}
 
+.custom-header {
+  color: #382F90;
+  font-size: 28px;
+  font-weight: 600;
+  padding-top: 50px;
+}
+
+.custom-text {
+  color: rgba(56, 47, 144, 0.6);
+  font-weight: 500;
+  padding-bottom: 30px;
+  padding-top: 5px;
+}
