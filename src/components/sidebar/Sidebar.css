@@ -2,11 +2,11 @@
   width: 220px;
 }
 
-.sidebar > ul {
+.menu {
   list-style-type: none;
 }
 
-.sidebar > ul > li {
+.menu > li {
   padding: 10px 15px; 
   color: #A0A0A0;
   align-items: center;
@@ -14,19 +14,48 @@
   font-size: 12px;
 }
 
-.sidebar > ul > li > span {
+.menu > li > span {
   align-items: center;
   display: flex;
   margin-right: 20px;
 }
 
-.sidebar > ul > li:hover {
+.menu > li:hover {
   cursor: pointer;
   background: #2A36A4;
   color: #fff;
 }
 
-.sidebar > ul > li:nth-child(8) {
+.menu > li:nth-child(8) {
   padding-top: 10px;
   border-top: 1px solid #DFE0EB;
+}
+
+.mainMenu {
+  padding-top: 150px;
+}
+
+.mobileMenu {
+  display: none;
+  
+}
+
+.closeBtn, .menuBtn {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.mobileContainer {
+  background-color: #fff;
+}
+
+@media only screen and  (max-width: 800px) {
+  .mainMenu {
+    display: none;
+  }
+  
+  .mobileMenu {
+    display: block;
+    
+  }
 }

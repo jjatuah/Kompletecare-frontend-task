@@ -2,9 +2,6 @@
   display: flex;
 }
 
-.side {
-  padding-top: 150px;
-}
 
 .mainPage {
   background: #F5F5FB;
@@ -40,7 +37,7 @@
 .custom-col {
   padding: 0 25px 25px;
   color: #000000;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .custom-label1 {
@@ -74,3 +71,22 @@
   border-radius: 10px;
   margin-right: 80px;
 }
+
+@media only screen and  (max-width: 800px) {
+  .side {
+    position: fixed;
+    top: 3%;
+    left: 3%;
+    z-index: 100;
+  }
+} 
+
+
+
+@media only screen and  (max-width: 576px) {
+  .custom-topBar:nth-child(1) {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+} 
