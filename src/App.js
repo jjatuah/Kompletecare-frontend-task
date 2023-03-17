@@ -3,6 +3,7 @@ import profilePic from "./assets/proPic.png";
 import vector1 from "./assets/Vector1.png";
 import vector2 from "./assets/Vector2.png";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/js/src/modal";
 import Sidebar from './components/sidebar/Sidebar';
 import {Container, Row, Col, Image, Form, Button} from 'react-bootstrap';
 import { useEffect, useState } from 'react';
@@ -43,6 +44,8 @@ function App() {
           }
         });  
 
+
+        setData1(response.data.data[0])
         setList1(response.data.data[0].investigations)
         setData2(response.data.data[1])
         setList2(response.data.data[1].investigations)
@@ -131,11 +134,24 @@ function App() {
                   </Col>
                 </Row>
               </Form.Group>
-              <input className="custom-submitBtn" type="submit" value={"Save and Send"} />
+              <input className="custom-submitBtn" data-bs-toggle="modal" data-bs-target="#submitPop" type="submit" value={"Save and Send"} />
             </Container>
           </Form>
 
         </Container>
+        {/* Modal  */}
+        <div className='modal fade' id='submitPop' tabIndex={-1} aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-body">
+                <button type='button' className='btn-close' data-bs-dismiss="modal" aria-label='close '></button>
+                <div className='d-block w-100'>
+                  <h4>Submition Successful</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
